@@ -30,16 +30,22 @@ console.log("numero4 es menor numero2 ", numero4 > numero2);
 console.log("numero1 es mayor numero3 ", numero1 > numero3);
 
 let edad = 18;
-console.log("la edad es mayor o igual que 18 ", edad>=18);
-
+console.log("la edad es mayor o igual que 18 ", edad >= 18); //true
+let edad2 = 17.999;
+console.log(edad2 >= 18); //False
+let edad3 = 18.000001;
+console.log(edad3 > 18); //true
+let edad4 = 18.1;
+console.log(edad4 <= 18); //false
+let edad5 = 22;
+console.log(edad5 > "21a");
 
 // Condicionales para evaluar
 if (edad >= 20) {
     let algo = "Definiendo algo"
     console.log("El usuario es una persona mayor de edad");
-}
-else {
-console.log("Bloque else");
+} else {
+    console.log("Bloque else");
 }
 
 let canAccess = window.prompt("Ingrese su edad");
@@ -47,6 +53,8 @@ console.log("Edad ingresada por el usuario: ", canAccess);
 
 if (canAccess >= 18) {
     document.write("puede ingresar el boliche")
+} else if (canAccess > 50) {
+    document.write("Tiene un descuento por mayor")
 } else {
     document.write("Es menor, no puede ingresar el boliche")
-}
+};
