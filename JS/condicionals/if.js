@@ -48,13 +48,162 @@ if (edad >= 20) {
     console.log("Bloque else");
 }
 
-let canAccess = window.prompt("Ingrese su edad");
-console.log("Edad ingresada por el usuario: ", canAccess);
+// let canAccess = window.prompt("Ingrese su edad");
+// console.log("Edad ingresada por el usuario: ", canAccess);
 
-if (canAccess >= 18) {
-    document.write("puede ingresar el boliche")
-} else if (canAccess > 50) {
-    document.write("Tiene un descuento por mayor")
+// // if (canAccess >= 18) {
+// //     document.write("puede ingresar el boliche")
+// // } else if (canAccess > 50) {
+// //     document.write("Tiene un descuento por mayor")
+// // } else {
+// //     document.write("Es menor, no puede ingresar el boliche")
+// // };
+// if(canAccess >= 18) {
+//     document.write("puede ingresar el boliche <br>")
+//     if(canAccess > 50) {document.write("Tiene un descuento por mayor")}
+// } else {
+//    document.write("Es menor, no puede ingresar el boliche")
+// };
+
+// Niño menor paga 50% del valor de la entrada (0-12)
+// Adolocente paga un 80% del valor de la entrada (13-17)
+// Adulto paga el 100% (18-55)
+// Persona mayor paga el 70% (55-)
+
+const valorEntrada = 400;
+const pochoclos = 200;
+const gaseosa = 100;
+let valorTotal = 0
+let socios = false;
+// Valor de la entrada + caja de pochoclos $200 + una Gaseosa $100
+
+
+let años = window.prompt("Ingrese su edad");
+console.log("Edad ingresada por el usuario: ", años);
+
+if (años >= 55){
+    document.write("Valor de la entrada $ " + valorEntrada*.75 + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal = valorEntrada*.75;
+
+} else if (años <= 12){
+    document.write("Valor de la entrada $ " + valorEntrada*.5 + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal = valorEntrada*.5;
+} else if (años < 18){
+    document.write("Valor de la entrada $ " + valorEntrada*.8 + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal = valorEntrada*.8;
 } else {
-    document.write("Es menor, no puede ingresar el boliche")
-};
+    document.write("Valor de la entrada $ " + valorEntrada + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal = valorEntrada;
+}
+// valorTotal +=  pochoclos + gaseosa;
+valorTotal = valorTotal + pochoclos + gaseosa;
+document.write("<br> Monto hasta el momento: " + valorTotal + "<br>")
+
+años = window.prompt("Ingrese su edad");
+console.log("Edad ingresada por el usuario: ", años);
+
+if (años >= 55){
+    document.write("Valor de la entrada $ " + valorEntrada*.75 + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal += valorEntrada*.75;
+
+} else if (años <= 12){
+    document.write("Valor de la entrada $ " + valorEntrada*.5 + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal += valorEntrada*.5;
+} else if (años < 18){
+    document.write("Valor de la entrada $ " + valorEntrada*.8 + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal += valorEntrada*.8;
+} else {
+    document.write("Valor de la entrada $ " + valorEntrada + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal += valorEntrada;
+}
+// valorTotal +=  pochoclos + gaseosa;
+valorTotal = valorTotal + pochoclos + gaseosa;
+document.write("<br> Monto hasta el momento: " + valorTotal + "<br>");
+
+años = window.prompt("Ingrese su edad");
+console.log("Edad ingresada por el usuario: ", años);
+
+if (años >= 55){
+    document.write("Valor de la entrada $ " + valorEntrada*.75 + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal = valorTotal + valorEntrada*.75;
+
+} else if (años <= 12){
+    document.write("Valor de la entrada $ " + valorEntrada*.5 + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal = valorTotal + valorEntrada*.5;
+} else if (años < 18){
+    document.write("Valor de la entrada $ " + valorEntrada*.8 + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal = valorTotal + valorEntrada*.8;
+} else {
+    document.write("Valor de la entrada $ " + valorEntrada + " + caja de pochoclos $" + pochoclos + " + una Gaseosa $ " + gaseosa)
+    valorTotal = valorTotal + valorEntrada;
+}
+// valorTotal +=  pochoclos + gaseosa;
+valorTotal = valorTotal + pochoclos + gaseosa;
+
+document.write("<br> El valor total de la entrada con sus productos es de: $" + valorTotal)
+
+let age = window.prompt("Ingrese su edad");
+console.log("Edad ingresada por el usuario: ", age);
+
+if(age >= 55 ){
+    valorTotal = valorEntrada * .75;
+} else if (age >= 18) {
+    valorTotal = valorTotal + valorEntrada;
+}
+else if (age >= 13) {
+    valorTotal = valorTotal + valorEntrada * .8;
+}
+else {
+    valorTotal = valorTotal + valorEntrada * .5;
+}
+
+valorTotal = valorTotal + pochoclos + gaseosas;
+document.write("Valor a abonar por persona 1: " + valorTotal);
+
+// const age >= prompt("ingresar edad");
+// if(age >= 55){
+//     if (socios == true){
+//         console.log("entra al mayor, SOCIO")
+//     //     valorTotal = valorTotal + valorEntrada * 0.6; //300
+//     // } else {
+//     //     console.log("entra en else")
+//         valorTotal = valorTotal + valorEntrada * 0.75;
+//     }
+
+
+// } else if (age >= 18) {
+//     valorTotal = valorTotal + valorEntrada;
+// } else if (age >= 13){
+//     valorTotal = valorTotal + valorEntrada * 0.8;
+// } else {
+//     valorTotal = valorTotal + valorEntrada * 0.5;
+// }
+
+// if (socio){
+//     valorTotal = valorTotal * 0.5;
+// }
+
+// valorTotal = valorTotal + pochoclos + gaseosa;
+// document.write("Valor a abonar por persona 1: " + valorTotal)
+
+// Los signos de fuego son Aries, Leo y Sagitario. 
+// ·Los signos de tierra son Tauro, Virgo y Capricornio. 
+// ·Los signos de aire son Géminis, Libra y Acuario. 
+// ·Los signos de agua son Cáncer, Escorpio y Piscis.
+// if(condicion1 && condicion2 && condicion3 && condicion4){
+    
+// }
+let signo = promp ("ingrese su signo");
+signo = signo.toLowerCase();
+
+if(signo == "Aries" || signo == "Leo" || signo == "Sagitario"){
+document.write("Su signo es del tipo fuego")
+} if (signo == "Tauro" || signo == "Virgo" || signo == "Capricornio"){
+    document.write("Su signo es del tipo Tierra")
+}
+if (signo == "Géminis" || signo == "Libra" || signo == "Acuario"){
+    document.write("Su signo es del tipo Tierra")
+}
+if (signo == "Cancer" || signo == "Escorpio" || signo == "Piscis"){
+    document.write("Su signo es del tipo Tierra")
+}
